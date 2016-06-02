@@ -12,7 +12,7 @@ class CreatePenyediaTable extends Migration
      */
     public function up()
     {
-        Schema::table('penyedia', function (Blueprint $table) {
+        Schema::create('penyedia', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
             $table->string('email')->unique();
@@ -21,7 +21,7 @@ class CreatePenyediaTable extends Migration
             $table->foreign('id_kategori')
                 ->references('id')
                 ->on('kategori')
-                ->onDelete('casecade');
+                ->onDelete('cascade');
             $table->string('website')->nullable();
             $table->string('telepon');
             $table->string('sosmed_fb')->nullable();

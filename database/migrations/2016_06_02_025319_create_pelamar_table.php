@@ -12,7 +12,7 @@ class CreatePelamarTable extends Migration
      */
     public function up()
     {
-        Schema::table('pelamar', function (Blueprint $table) {
+        Schema::create('pelamar', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
             $table->string('email')->unique();

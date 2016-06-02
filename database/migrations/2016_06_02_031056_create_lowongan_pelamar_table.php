@@ -12,18 +12,18 @@ class CreateLowonganPelamarTable extends Migration
      */
     public function up()
     {
-        Schema::table('lowongan_pelamar', function (Blueprint $table) {
+        Schema::create('lowongan_pelamar', function (Blueprint $table) {
             $table->integer('id_lowongan')->unsigned();
             $table->integer('id_pelamar')->unsigned();
 
             $table->foreign('id_pelamar')
                 ->references('id')
                 ->on('pelamar')
-                ->onDelete('casecade');
+                ->onDelete('cascade');
             $table->foreign('id_lowongan')
                 ->references('id')
                 ->on('lowongan')
-                ->onDelete('casecade');
+                ->onDelete('cascade');
             $table->primary(['id_lowongan', 'id_pelamar']);
         });
     }

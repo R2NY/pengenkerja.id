@@ -12,7 +12,7 @@ class CreateLowonganTable extends Migration
      */
     public function up()
     {
-        Schema::table('lowongan', function (Blueprint $table) {
+        Schema::create('lowongan', function (Blueprint $table) {
             $table->increments('id');
             $table->string('posisi');
             $table->integer('gaji');
@@ -24,7 +24,7 @@ class CreateLowonganTable extends Migration
             $table->foreign('id_penyedia')
                 ->references('id')
                 ->on('penyedia')
-                ->onDelete('casecade');
+                ->onDelete('cascade');
         });
     }
 
