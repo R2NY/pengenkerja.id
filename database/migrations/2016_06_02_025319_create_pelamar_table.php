@@ -26,6 +26,7 @@ class CreatePelamarTable extends Migration
             $table->string('cv');
             $table->string('username')->unique();
             $table->string('password');
+            $table->enum('status', [0,1]);
         });
     }
 

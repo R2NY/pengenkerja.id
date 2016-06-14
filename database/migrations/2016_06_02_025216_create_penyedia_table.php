@@ -28,6 +28,7 @@ class CreatePenyediaTable extends Migration
             $table->string('logo');
             $table->string('username')->unique();
             $table->string('password');
+            $table->enum('status', [0,1]);
         });
     }
 
