@@ -11,6 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|-----------------
+| Front End
+|-----------------
+*/
+
+Route::get('/', 'PageController@index');
+Route::get('pelamar/daftar', 'PelamarController@register');
+Route::post('pelamar/daftar', 'PelamarController@registerProcess');
+
+Route::get('pelamar/login', 'PelamarController@login');
+Route::post('pelamar/login', 'PelamarController@loginProcess');
+
+/*
+|-----------------
+| Back End
+|-----------------
+*/
+
+Route::get('pelamar', 'PelamarController@index');
+Route::get('penyedia', 'PenyediaController@index');
+Route::delete('penyedia/{id}', 'PenyediaController@destroy');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

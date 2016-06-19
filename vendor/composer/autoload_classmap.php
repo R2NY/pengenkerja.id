@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreateKategoriTable' => $baseDir . '/database/migrations/2016_06_02_041905_create_kategori_table.php',
+    'CreateKategoriTable' => $baseDir . '/database/migrations/2016_06_02_025215_create_kategori_table.php',
     'CreateLowonganPelamarTable' => $baseDir . '/database/migrations/2016_06_02_031056_create_lowongan_pelamar_table.php',
     'CreateLowonganTable' => $baseDir . '/database/migrations/2016_06_02_030908_create_lowongan_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
@@ -481,6 +481,8 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+    'PelamarTableSeeder' => $baseDir . '/database/seeds/PelamarTableSeeder.php',
+    'PenyediaTableSeeder' => $baseDir . '/database/seeds/PenyediaTableSeeder.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',
     'SebastianBergmann\\Comparator\\ComparisonFailure' => $vendorDir . '/sebastian/comparator/src/ComparisonFailure.php',

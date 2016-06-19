@@ -45,6 +45,22 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        
+        /*
+        |-----------------------------------
+        | For multiple Auth
+        |-----------------------------------
+        */
+
+        'penyedia' => [
+            'driver'    => 'session',
+            'provider'  => 'penyedia',
+        ],
+
+        'pelamar' => [
+            'driver'    => 'session',
+            'provider'  => 'pelamar',
+        ],
     ],
 
     /*
@@ -69,6 +85,23 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+
+        /*
+        |-----------------------------------
+        | For multiple Auth
+        |-----------------------------------
+        */
+
+        'penyedia' => [
+            'driver'    => 'eloquent',
+            'model'     => App\Penyedia::class,
+        ], 
+
+        'pelamar' => [
+            'driver'    => 'eloquent',
+            'model'     => App\Pelamar::class,
+        ],
+        
 
         // 'users' => [
         //     'driver' => 'database',
