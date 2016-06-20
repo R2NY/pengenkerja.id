@@ -1,8 +1,11 @@
 @if (count($errors) > 0)
-	<div class="alert alert-danger" role="alert">
-		<strong><i class="fa fa-exclamation-triangle"></i> Whoops! Something went wrong!</strong><br><br>
-		@foreach($errors->all() as $error)
-			{{ $error }} <br>
+	<div class="ui error message">
+	  <i class="close icon"></i>
+	  <div class="header">Whoops! Something went wrong!</div>
+	  <ul class="list">
+	  	@foreach($errors->all() as $error)
+			<li>{{ $error }}</li>
 		@endforeach
+	  </ul>
 	</div>
 @endif

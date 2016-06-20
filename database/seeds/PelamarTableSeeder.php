@@ -15,6 +15,7 @@ class PelamarTableSeeder extends Seeder
     {
         $pelamar = Pelamar::create([
         	'nama' 		=> 'Nur Muhammad',
+            'kelamin'   => 'L',
         	'email' 	=> 'blog.nurmuhammad@gmail.com',
         	'alamat' 	=> 'The Cave, Perumahan Kavling UII',
         	'telepon' 	=> '087864423038',
@@ -26,6 +27,7 @@ class PelamarTableSeeder extends Seeder
 
         $pelamar = Pelamar::create([
         	'nama' 		=> 'Resqa Dahmurah',
+            'kelamin'   => 'P',
         	'email' 	=> 'dahmurah.resqa@gmail.com',
         	'alamat' 	=> 'The Cave, Perumahan Kavling UII',
         	'telepon' 	=> '082864423038',

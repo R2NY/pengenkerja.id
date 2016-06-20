@@ -30,7 +30,7 @@
 		    	<td>{{ $p->nama }}</td>
 		    	<td>{{ $p->email }}</td>
 		    	<td>{{ $p->alamat }}</td>
-		    	<td>{!! $p->status == 0 ? "<span class='ui grey label'>Tidak Aktif</span>" : "<span class='ui green label'>Aktif</span>" !!}</td>
+		    	<td><a href="{{ url('penyedia/status/'.$p->id) }}" title="Ubah">{!! $p->status == 0 ? "<span class='ui grey label'>Tidak Aktif</span>" : "<span class='ui green label'>Aktif</span>" !!}</a></td>
 		    	<td>
 		    		<form action="{{ url('penyedia/'.$p->id) }}" method="POST" id="my-form-{{ $no }}">
 		    			{{ csrf_field() }}
@@ -53,6 +53,7 @@
 					      <div class="ui header">{{ $p->nama }}</div>
 					      <div class="ui divided selection list">
 							  <a class="item">
+							  	<div>&nbsp;</div>
 							    <div class="ui horizontal label">Kategori</div> {{ $p->kategori->nama }}
 							  </a>
 							  <a class="item">

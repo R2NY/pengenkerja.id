@@ -15,6 +15,7 @@ class CreatePelamarTable extends Migration
         Schema::create('pelamar', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->enum('kelamin', ['L','P']);
             $table->string('email')->unique();
             $table->text('alamat');
             $table->string('telepon');
@@ -27,6 +28,7 @@ class CreatePelamarTable extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->enum('status', [0,1]);
+            $table->rememberToken();
         });
     }
 

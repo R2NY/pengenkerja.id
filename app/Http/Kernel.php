@@ -49,5 +49,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'pelamar' => \App\Http\Middleware\isPelamar::class,
+        'penyedia' => \App\Http\Middleware\isPenyedia::class,
     ];
 }

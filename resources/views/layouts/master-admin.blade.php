@@ -17,7 +17,7 @@
 	    <i class="dropdown icon"></i>
 	    <div class="menu">
 	      <a href="#" class="item"><i class="setting icon"></i>Pengaturan</a>
-	      <a href="#" class="item"><i class="sign out icon"></i>Keluar</a>
+	      <a href="{{ url('logout') }}" class="item"><i class="sign out icon"></i>Keluar</a>
 	    </div>
 	  </div>
 	  
@@ -29,7 +29,7 @@
 	    	<h4 class="ui grey header">Nur Muhammad</h4>
 	        <p>Sign Out</p>
 	    </a>
-	    <a class="item">
+	    <a class="item" href="{{ url('dashboard') }}">
 	      <i class="block layout icon"></i> Dashboard
 	    </a>	    
 	    <a class="item" href="{{ url('lowongan') }}">

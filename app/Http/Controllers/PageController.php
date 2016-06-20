@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Lowongan;
+
 class PageController extends Controller
 {
     public function index() {
-    	return view('pages.index');
+    	$lowongan = Lowongan::orderBy('tgl_mulai', 'desc')->get();
+
+    	return view('pages.home', compact('lowongan'));
     }
 }
