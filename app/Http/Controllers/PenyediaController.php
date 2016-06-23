@@ -51,7 +51,7 @@ class PenyediaController extends Controller
 
     public function dashboard() {
         $dash = true;
-        $penyedia = Penyedia::find(auth('penyedia')->user()->id)->get()->first();
+        $penyedia = auth('penyedia')->user();
 
         return view('pages.penyedia.dashboard', compact('dash', 'penyedia'));
     }

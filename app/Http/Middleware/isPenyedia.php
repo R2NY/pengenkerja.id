@@ -16,9 +16,14 @@ class isPenyedia
      */
     public function handle($request, Closure $next, $guard = 'penyedia')
     {
-        if (!Auth::guard($guard)->check()) {
-            return redirect('penyedia/login');
+        if (Auth::guard($guard)->guest()) {
+            if ($request->ajax() || $request->wantsJson()) {
+                return response('Unauthorized.', 401);
+            } else {
+                return redirect()->guest('penyedia/login');
+            }
         }
+
         return $next($request);
     }
 }

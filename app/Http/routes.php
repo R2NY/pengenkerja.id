@@ -36,6 +36,9 @@ Route::post('penyedia/login', 'PenyediaController@loginProcess');
 Route::get('penyedia/logout', 'PenyediaController@logout');
 
 // Harus login
+Route::group(['middleware' => ['web']], function () {
+    //
+});
 Route::group(['middleware' => ['pelamar']], function () {
 	Route::get('pelamar/showText', 'PelamarController@showText'); // Just trying
 });
